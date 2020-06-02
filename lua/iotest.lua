@@ -1,6 +1,6 @@
 -- Basic file In/Out test 
 -- asciibene 
-while isdone == false
+while (isdone == false) do
 print("Please input desired text") 
 txt = io.read("*a") 
 tic()
@@ -22,8 +22,8 @@ io.write(tt)
 print ("Are you done ?")
 -- if done isdone becomes true
 di = io.read("*a")
-if di == y then isdone = true
+if di == "y" then isdone = true
 end
-
+end
 
 
