@@ -1,15 +1,29 @@
-
-
-function inc(v)
+function inc(v) 
  _G[v] = _G[v] + 1 
 end 
-function dec(v)
+function dec(v) 
  _G[v] = _G[v] - 1 
+end 
+
+function ginput(str)
+str = io.read('*a')
+return str
 end
 
-cls() 
+function attack()
+mhp = mhp - atk
+print ('You hit ', mname, ' !')
+print ('\nIt has ', mhp, ' HP left')
+end
+
+function mattack()
+hp = hp - matk
+print (mname, ' hits ', name, ' !')
+print ('\nYou have ', hp, ' HP left')
+end
+
 io.write("\nEnter your name: ") 
-name = io.read("*a") 
+name = 'AB'
 -- Define Player stats 
 hp = 25 
 atk = 3 
@@ -21,13 +35,11 @@ mname = "JELLO"
 matk = 1 
 mlvl = 0 
 -- start 
-cls() 
 io.write("LUADUNGEON by \n") 
-io.write( " ASCII Benefactor" ) 
+io.write( " ASCII Benefactor" )
 io.write("\n You are : ", name, "\n" ) 
-io.write( "you have ", hp ," health" ) 
-while isded do 
-io.write("You attack ", mname, "\n") 
-mhp = mhp - atk 
-io.write(mname, " has ", mhp, " Hp." ) 
-end 
+io.write( "you have ", hp ," health" )
+
+
+attack()
+mattack()
